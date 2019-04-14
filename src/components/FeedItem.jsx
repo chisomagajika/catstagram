@@ -11,4 +11,20 @@
 	// Hint: what do you need in order to get the image to display?
 	// Hint: what do you need in order to get likes to display in the Likes component?
 
-import React from 'react';
+import React, {Component} from 'react';
+import Likes from './Likes.jsx'
+
+class FeedItem extends Component{
+	render(){
+		const {url,likes} =this.props;
+		return(
+			<div className ='FeedItem' >
+			
+				<img src = {url}/>
+				
+				<Likes likes={likes}/>
+			</div>
+		)
+	}
+}
+export default FeedItem;

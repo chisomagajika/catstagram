@@ -9,4 +9,30 @@
 	// destructure photos from props
 	// iterate over the data and map each photo data to a FeedItem
 
-import React from 'react';
+import React, {Component} from 'react';
+import FeedItem from './FeedItem.jsx';
+
+class FeedList extends Component{
+	// imageArray(photos){
+	// 	const mapOfPhotos = this.props.imagePhotos.map(photo=>{
+	// 		const {url} = imagePhotos;
+	// 		console.log(url);
+	// 		return url;
+	// 	})
+	// }
+	render(){
+		const arrayOfComponents = this.props.imagePhotos.map((photo,i)=>{
+					console.log(photo)
+					const {url, likes} = photo
+					return <FeedItem key={i} url={url} likes={likes}/>
+				})
+		return(
+			<div>
+				
+				{arrayOfComponents}
+			</div>
+		)
+	}
+
+}
+export default FeedList;

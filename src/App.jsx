@@ -13,7 +13,19 @@
 	// set up BrowserRouter
 	// set up Route to with paths to each page (hint: HomePage should "/") and with the appropriate component
 
-import React from 'react';
+import React, {Component} from 'react';
 import Header from './components/Header.jsx';
 import HomePage from './pages/HomePage.jsx';
 
+
+class App extends Component {
+	render(){
+		return(
+			<div className='App'>
+				<Header />
+				<HomePage />
+			</div>
+		)
+	}
+}
+export default App;

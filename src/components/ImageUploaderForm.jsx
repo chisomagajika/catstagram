@@ -34,4 +34,17 @@
     // takes the url of the photo updates photos state with by creating a new object in the photos data.
     // Make sure that function is called on handleSubmit in ImageUploaderForm!
 
-import React from 'react';
+import React,{Component} from 'react';
+class ImageUploaderForm extends Component{
+render(){
+    return(
+        <form className = 'ImageUploaderForm'>
+        <input type="text"/>
+        <input type='sumit' />
+
+
+        </form>
+    )
+}
+}
+export default ImageUploaderForm;

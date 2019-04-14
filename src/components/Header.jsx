@@ -10,4 +10,21 @@
     // use the Link component to link to each route with a 'to' property
     // check that your links work!
 
-import React from 'react';
+import React,{Component} from 'react';
+
+
+class Header extends Component{
+    render(){
+        return(
+            <div >
+                <ul className ='Header'>
+                    <li> Catstagram</li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Profile</li>
+                </ul>
+            </div>
+        )
+    }
+}
+export default Header;
