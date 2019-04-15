@@ -22,13 +22,34 @@ import FeedList from '../components/FeedList.jsx';
 
 
 class HomePage extends Component {
+	constructor(prop){
+		super(prop)
+		const {photos} = data
+		this.state=((currentState)=>{
+			photos: currentState.photos.push()
+
+			
+		})
+	}
+	handleAddPhoto=(url)=>{
+		console.log(url)
+		const {photos} = this.state;
+
+		this.setState({
+			photos: d
+		})
+		
+
+	}
 	
 	render(){
-		const {photos} = data;
 		
 		
 		return(
 			<div className='HomePage'>
+				// pass in handleAddPhoto function as a prop to ImageUploaderForm
+				// call that function with the url in ImageUploaderForm when user clicks handle submit
+				// url should be console.logged
 				<ImageUploaderForm />
 				<FeedList imagePhotos={photos}/>
 

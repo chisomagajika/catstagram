@@ -36,11 +36,28 @@
 
 import React,{Component} from 'react';
 class ImageUploaderForm extends Component{
+    constructor(prop){
+        super(prop)
+        this.state={
+            url:''
+        }
+    }
+    handlechange = (event)=>{
+        // console.log('i am here')
+        this.setState({url:event.target.value})
+
+    }
+    handleSumit=(event)=>{
+        event.preventDefault()
+        return
+
+    }
 render(){
+    const {message} = this.state;
     return(
         <form className = 'ImageUploaderForm'>
-        <input type="text"/>
-        <input type='sumit' />
+        <input value={message} onChange={this.handlechange}/>
+        <button onClick = {this.handleSumit} >summit </button>
 
 
         </form>
